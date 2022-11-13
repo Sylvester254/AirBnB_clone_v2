@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Prepare my webservers (web-01 & web-02)
 sudo apt-get update
 sudo apt-get install -y nginx
 # Create directories...
