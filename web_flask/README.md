@@ -50,3 +50,23 @@ $ pip3 install Flask
 ```
 
 <img src="https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step3.png">
+
+## Tasks
+<img src="../tasks/task0.png">
+<img src="../tasks/task1.png">
+<img src="../tasks/task2.png">
+<img src="../tasks/task3.png">
+<img src="../tasks/task4.png">
+<img src="../tasks/task5.png">
+<img src="../tasks/task6.png">
+<img src="../tasks/task7a.png">
+<img src="../tasks/task7b.png">
+<img src="../tasks/task8a.png">
+<img src="../tasks/task8b.png">
+<img src="../tasks/task9a.png">
+<img src="../tasks/task9b.png">
+<img src="../tasks/task10a.png">
+<img src="../tasks/task10.png">
+<img src="../tasks/task11.png">
+<img src="../tasks/task11b.png">
+<img src="../tasks/task11c.png">
