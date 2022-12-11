@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
-from models.base_model import Base, BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from models import storage
 from models.city import City
 from os import getenv
@@ -29,3 +29,9 @@ class State(BaseModel, Base):
                     city_list.append(city)
 
             return city_list
+    else:
+        cities = relationship(
+            'City',
+            cascade='all, delete-orphan',
+            backref='state',
+        )
