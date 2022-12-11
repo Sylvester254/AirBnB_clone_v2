@@ -4,7 +4,7 @@ Start a flask app
 """
 from flask import Flask, render_template
 from models import storage
-from models.state import State
+from models import *
 
 app = Flask(__name__)
 
@@ -23,24 +23,17 @@ def display_states():
     display all states in HTML page
     """
     return render_template('7-states_list.html',
-                           states=storage.all(State).values())
+                           states=storage.all("State").values())
 
 
-@app.route('/states/<id>', strict_slashes=False)
-def disp_A_state_cities(id):
-    """
-    Display a HTML
-    """
-    states = storage.all(State).values()
-    a_state = None
-    for state in states:
-        if state.id == id:
-            a_state = state
-
-    return render_template('9-states.html',
-                           states=states,
-                           f_id=True,
-                           a_state=a_state)
+@app.route('/states', strict_slashes=False)
+@app.route('/states/<state_id>', strict_slashes=False)
+def states(state_id=None):
+    """display the states and cities listed in alphabetical order"""
+    states = storage.all("State")
+    if state_id is not None:
+        state_id = 'State.' + state_id
+    return render_template('9-states.html', states=states, state_id=state_id)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
